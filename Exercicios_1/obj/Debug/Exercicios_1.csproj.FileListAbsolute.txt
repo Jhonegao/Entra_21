@@ -29,3 +29,4 @@ C:\Users\entra21\Source\Repos\Jhonegao\Entra_21\Exercicios_1\obj\Debug\Exercicio
 C:\Users\entra21\Source\Repos\Jhonegao\Entra_21\Exercicios_1\obj\Debug\Exercicios_1.csproj.GenerateResource.cache
 C:\Users\entra21\Source\Repos\Jhonegao\Entra_21\Exercicios_1\obj\Debug\Exercicios_1.exe
 C:\Users\entra21\Source\Repos\Jhonegao\Entra_21\Exercicios_1\obj\Debug\Exercicios_1.pdb
+C:\Users\entra21\Source\Repos\Jhonegao\Entra_21\Exercicios_1\obj\Debug\Exercicios.FormMenuExercicios1.resources
