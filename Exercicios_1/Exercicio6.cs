@@ -20,15 +20,19 @@ namespace Exercicios
         private void btnOrdenar_Click(object sender, EventArgs e)
         {
 
+
             List<double> valores = new List<double> { };
+
             valores.Add(Convert.ToDouble(txtValor1.Text));
             valores.Add(Convert.ToDouble(txtValor2.Text));
             valores.Add(Convert.ToDouble(txtValor3.Text));
             valores.Sort();
+
             string valoresString = "";
-            foreach (int item in valores)
+          
+            foreach (double item in valores)
             {
-                valoresString += item+",";
+                valoresString = valoresString + item+",";
             }
 
             MessageBox.Show($"Valores ordenados: {valoresString}");

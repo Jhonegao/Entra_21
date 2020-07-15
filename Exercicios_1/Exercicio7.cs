@@ -19,27 +19,24 @@ namespace Exercicios
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
+            
             int valorEntrada = Convert.ToInt32(txtValor.Text);
-            if (valorEntrada % 2 == 0 && valorEntrada > 0)
+            if (valorEntrada % 2 == 0 && valorEntrada >= 0)
             {
                 MessageBox.Show($"O numero {valorEntrada} é positivo e par.");
             }
-            else if (valorEntrada % 2 == 0 && valorEntrada < 0)
+            else if (valorEntrada % 2 == 0 && valorEntrada <= 0)
             {
                 MessageBox.Show($"O numero {valorEntrada} é negativo e par.");
-
             }
-            else if (valorEntrada < 0 )
+            else if (valorEntrada < 0)
             {
                 MessageBox.Show($"O numero {valorEntrada} é negativo e impar.");
-
             }
             else
             {
                 MessageBox.Show($"O numero {valorEntrada} é positivo e impar.");
-
             }
-
 
         }
     }
