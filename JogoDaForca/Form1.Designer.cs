@@ -36,7 +36,7 @@
             this.lbDica = new System.Windows.Forms.Label();
             this.lbTentativasTexto = new System.Windows.Forms.Label();
             this.lbNumeroTentativas = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -113,15 +113,15 @@
             this.lbNumeroTentativas.TabIndex = 7;
             this.lbNumeroTentativas.Text = "0";
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(276, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscar.Location = new System.Drawing.Point(276, 98);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -138,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 295);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lbNumeroTentativas);
             this.Controls.Add(this.lbTentativasTexto);
             this.Controls.Add(this.lbDica);
@@ -164,7 +164,7 @@
         private System.Windows.Forms.Label lbDica;
         private System.Windows.Forms.Label lbTentativasTexto;
         private System.Windows.Forms.Label lbNumeroTentativas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
     }
 }

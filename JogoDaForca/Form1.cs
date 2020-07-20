@@ -15,8 +15,8 @@ namespace JogoDaForca
         //inicializando vetor de strings para armezenar um numero X de palavras 
         string[] palavra = new string[3];
         string[] dica = new string[3];
-        string palavraReserva;
         string dicaDaPalavra;
+        string palavraReserva;
         char[] palavraEscondidaVetor;
         string palavraEscondida;
         int numeroTentativas = 5;
@@ -27,13 +27,13 @@ namespace JogoDaForca
 
             palavra[0] = "holanda";
             palavra[1] = "batata";
-            palavra[2] = "japao";
+            palavra[2] = "china";
             dica[0] = "Pais da Europa";
-            dica[1] = "Pão de ..";
-            dica[2] = "Xingling";
+            dica[1] = "MEME: Pão de ...";
+            dica[2] = "Coronga";
             
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             //RESETANDO a string para armazenar caracteres ao invez da palavra real.
             palavraEscondida = "";
@@ -61,9 +61,8 @@ namespace JogoDaForca
         {
             string palavraAuxiliar = "";
             //criando variavel para letra que sera inserida pelo usuario
-            char letraInserida;
             //convertendo esta letra recebida para CHAR para poder utilizar a comparacao no FOR .Trim() para garantir que sera minusculo
-            letraInserida = Convert.ToChar(txtLetra.Text.ToLower());
+            char letraInserida = Convert.ToChar(txtLetra.Text.ToLower());
             //controlador de match
             bool matchLetra = false;
 
