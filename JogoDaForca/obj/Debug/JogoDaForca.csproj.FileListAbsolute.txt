@@ -2,7 +2,6 @@ C:\GitEntra21\JogoDaForca\bin\Debug\JogoDaForca.exe.config
 C:\GitEntra21\JogoDaForca\bin\Debug\JogoDaForca.exe
 C:\GitEntra21\JogoDaForca\bin\Debug\JogoDaForca.pdb
 C:\GitEntra21\JogoDaForca\obj\Debug\JogoDaForca.csprojAssemblyReference.cache
-C:\GitEntra21\JogoDaForca\obj\Debug\JogoDaForca.Form1.resources
 C:\GitEntra21\JogoDaForca\obj\Debug\JogoDaForca.Properties.Resources.resources
 C:\GitEntra21\JogoDaForca\obj\Debug\JogoDaForca.csproj.GenerateResource.cache
 C:\GitEntra21\JogoDaForca\obj\Debug\JogoDaForca.csproj.CoreCompileInputs.cache
@@ -18,3 +17,4 @@ C:\Users\entra21\Source\Repos\Jhon\JogoDaForca\obj\Debug\JogoDaForca.csproj.Gene
 C:\Users\entra21\Source\Repos\Jhon\JogoDaForca\obj\Debug\JogoDaForca.csproj.CoreCompileInputs.cache
 C:\Users\entra21\Source\Repos\Jhon\JogoDaForca\obj\Debug\JogoDaForca.exe
 C:\Users\entra21\Source\Repos\Jhon\JogoDaForca\obj\Debug\JogoDaForca.pdb
+C:\GitEntra21\JogoDaForca\obj\Debug\JogoDaForca.TelaInicial.resources
