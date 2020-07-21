@@ -12,21 +12,23 @@ namespace JogoDaForca
 {
     public partial class TelaInicial : Form
     {
-        string[] palavra = new string[4];
-        string[] dica = new string[4];
+        string[] palavra = new string[5];
+        string[] dica = new string[5];
         string dicaDaPalavra;
         string palavraReserva;
         char[] palavraEscondidaVetor;
-        string palavraEscondida;
+        //string palavraEscondida;
         int numeroTentativas = 5;
         public TelaInicial()
         {
             palavra[0] = "holanda";
             palavra[1] = "batata";
             palavra[2] = "china";
-            dica[0] = "MEME: É um pais da Europa";
-            dica[1] = "MEME: Pão de ...";
+            palavra[3] = "donald";
+            dica[0] = "É um pais da Europa";
+            dica[1] = "Pão de ...";
             dica[2] = "Coronga";
+            dica[3] = "Existe o presidente, mas tambem o pato.";
             InitializeComponent();
             panelJogo.Visible = false;
         }
@@ -38,88 +40,103 @@ namespace JogoDaForca
             txtLetra.Text = "";
         }
 
+        public string EsconderPalavra(string palavra)
+        {
+            string palavraEscondida = "";
+            for (int i = 0; i < palavra.Length; i++)
+            {
+                palavraEscondida = palavraEscondida + "*";
+            }
+
+            return palavraEscondida;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //RESETANDO a string para armazenar caracteres ao invez da palavra real.
-            palavraEscondida = "";
             //criando um randomizador.
             Random randomizar = new Random();
             //randomizando os valores para escolher uma palavra utilizando o metodo NEXT
             int escolha = randomizar.Next(0, 3);
-            //aplicando a palavra randomizada de acordo com o numero que ficou armazenado na variavel {escolha}.
+            //aplicando a palavra e a dica randomizada de acordo com o numero que ficou armazenado na variavel {escolha}.
             palavraReserva = palavra[escolha];
             dicaDaPalavra = dica[escolha];
             //aplicando as palavras nos campos.
-            lbDica.Text = dicaDaPalavra;
-
-            for (int i = 0; i < palavraReserva.Length; i++)
-            {
-                palavraEscondida = palavraEscondida + "*";
-            }
-            palavraEscondidaVetor = palavraEscondida.ToCharArray();
-            txtPalavra.Text = palavraEscondida;
+            lbDica.Text = $"Com {palavraReserva.Length} letras a dica é : {dicaDaPalavra} ";
+            palavraEscondidaVetor = EsconderPalavra(palavraReserva).ToCharArray();
+            txtPalavra.Text = EsconderPalavra(palavraReserva);
             //lbNumeroTentativas.Text = $"{numeroTentativas}";
             panelJogo.Visible = true;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            string palavraAuxiliar = "";
-            //criando variavel para letra que sera inserida pelo usuario
-            //convertendo esta letra recebida para CHAR para poder utilizar a comparacao no FOR .Trim() para garantir que sera minusculo
-            char letraInserida = Convert.ToChar(txtLetra.Text.ToLower());
-            //controlador de match
-            bool matchLetra = false;
-
-            for (int i = 0; i < palavraReserva.Length; i++)
+            if (txtLetra.Text == "")
             {
-                if (letraInserida == palavraReserva.ElementAt(i))
-                {
-                    matchLetra = true;
-                    palavraEscondidaVetor[i] = letraInserida;
-                    palavraAuxiliar = palavraAuxiliar + letraInserida;
-                }
-                else
-                {
-                    palavraAuxiliar = palavraAuxiliar + palavraEscondidaVetor[i];
-                }
+                MessageBox.Show("Insira uma letra");
             }
-            if (matchLetra) { }
             else
             {
-                numeroTentativas--;
-                lbFotos.ImageIndex = numeroTentativas;
-            }
-            txtPalavra.Text = palavraAuxiliar;
 
-            //TESTE WIN/LOSS
-            if (palavraReserva == txtPalavra.Text)
-            {
-                MessageBox.Show("WOOOW VOCÊ VENCEU");
-            }
-            else if (numeroTentativas <= 0)
-            {
+                string palavraAuxiliar = "";
+                //criando variavel para letra que sera inserida pelo usuario
+                //convertendo esta letra recebida para CHAR para poder utilizar a comparacao no FOR .Trim() para garantir que sera minusculo
+                char letraInserida = Convert.ToChar(txtLetra.Text.ToLower());
+                //controlador de match
+                bool matchLetra = false;
 
-               var close = MessageBox.Show("AWWW VOCE PERDEU", "Desligar", MessageBoxButtons.OK);
-                if (close == DialogResult.OK)
+                for (int i = 0; i < palavraReserva.Length; i++)
                 {
-                    PanelReset();
+                    if (letraInserida == palavraReserva.ElementAt(i))
+                    {
+                        matchLetra = true;
+                        palavraEscondidaVetor[i] = letraInserida;
+                        palavraAuxiliar = palavraAuxiliar + letraInserida;
+                    }
+                    else
+                    {
+                        palavraAuxiliar = palavraAuxiliar + palavraEscondidaVetor[i];
+                    }
                 }
-                
-            }
+                if (matchLetra) { }
+                else
+                {
+                    numeroTentativas--;
+                    lbFotos.ImageIndex = numeroTentativas;
+                }
+                txtPalavra.Text = palavraAuxiliar;
 
+                //TESTE WIN/LOSS
+                if (palavraReserva == txtPalavra.Text)
+                {
+                    MessageBox.Show("WOOOW VOCÊ VENCEU");
+                }
+                else if (numeroTentativas <= 0)
+                {
+                    var close = MessageBox.Show("AWWW VOCE PERDEU", "Desligar", MessageBoxButtons.OK);
+                    if (close == DialogResult.OK)
+                    {
+                        TelaInicial NovoJogo = new TelaInicial();
+                        NovoJogo.Show();
+                        this.Dispose(false);                        
+                        //PanelReset();
+                    }
+                }
+            }
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-
+            bool checkSpacePalavra = txtPalavraEscrita.Text.Contains(" ");
             bool checkPalavra = String.IsNullOrWhiteSpace(txtPalavraEscrita.Text);
             bool checkDica = String.IsNullOrWhiteSpace(txtDicaEscrita.Text);
-            if (!checkPalavra && !checkDica)
+            if (!checkPalavra && !checkDica && !checkSpacePalavra)
             {
                 palavraReserva = txtPalavraEscrita.Text.ToLower();
-                MessageBox.Show("Test");
-
+            }
+            else
+            {
+                //generic error
+                MessageBox.Show("A palavra não pode conter espaços, e a dica não pode ser vazia");               
             }
         }
     }
