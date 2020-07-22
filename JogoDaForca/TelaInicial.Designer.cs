@@ -40,14 +40,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.panelJogo = new System.Windows.Forms.Panel();
+            this.lbFotos = new System.Windows.Forms.Label();
+            this.imgList1 = new System.Windows.Forms.ImageList(this.components);
             this.lbInsiraLetra = new System.Windows.Forms.Label();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.txtLetra = new System.Windows.Forms.TextBox();
             this.lbDica = new System.Windows.Forms.Label();
             this.lbFixDica = new System.Windows.Forms.Label();
             this.txtPalavra = new System.Windows.Forms.TextBox();
-            this.imgList1 = new System.Windows.Forms.ImageList(this.components);
-            this.lbFotos = new System.Windows.Forms.Label();
             this.panelJogo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,6 +148,26 @@
             this.panelJogo.Size = new System.Drawing.Size(538, 283);
             this.panelJogo.TabIndex = 19;
             // 
+            // lbFotos
+            // 
+            this.lbFotos.ImageIndex = 5;
+            this.lbFotos.ImageList = this.imgList1;
+            this.lbFotos.Location = new System.Drawing.Point(3, 126);
+            this.lbFotos.Name = "lbFotos";
+            this.lbFotos.Size = new System.Drawing.Size(532, 154);
+            this.lbFotos.TabIndex = 12;
+            // 
+            // imgList1
+            // 
+            this.imgList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList1.ImageStream")));
+            this.imgList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgList1.Images.SetKeyName(0, "less5.jpg");
+            this.imgList1.Images.SetKeyName(1, "less4.jpg");
+            this.imgList1.Images.SetKeyName(2, "less3.jpg");
+            this.imgList1.Images.SetKeyName(3, "less2.jpg");
+            this.imgList1.Images.SetKeyName(4, "less1.jpg");
+            this.imgList1.Images.SetKeyName(5, "full.jpg");
+            // 
             // lbInsiraLetra
             // 
             this.lbInsiraLetra.AutoSize = true;
@@ -202,26 +222,6 @@
             this.txtPalavra.Size = new System.Drawing.Size(532, 26);
             this.txtPalavra.TabIndex = 6;
             // 
-            // imgList1
-            // 
-            this.imgList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList1.ImageStream")));
-            this.imgList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgList1.Images.SetKeyName(0, "less5.jpg");
-            this.imgList1.Images.SetKeyName(1, "less4.jpg");
-            this.imgList1.Images.SetKeyName(2, "less3.jpg");
-            this.imgList1.Images.SetKeyName(3, "less2.jpg");
-            this.imgList1.Images.SetKeyName(4, "less1.jpg");
-            this.imgList1.Images.SetKeyName(5, "full.jpg");
-            // 
-            // lbFotos
-            // 
-            this.lbFotos.ImageIndex = 5;
-            this.lbFotos.ImageList = this.imgList1;
-            this.lbFotos.Location = new System.Drawing.Point(3, 126);
-            this.lbFotos.Name = "lbFotos";
-            this.lbFotos.Size = new System.Drawing.Size(532, 154);
-            this.lbFotos.TabIndex = 12;
-            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +237,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TelaInicial";
             this.Text = "TelaInicial";
             this.panelJogo.ResumeLayout(false);
