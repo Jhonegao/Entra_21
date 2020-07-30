@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicios_1", "Exercicios_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoDaForca", "JogoDaForca\JogoDaForca.csproj", "{C7904C04-C18D-42ED-B8DB-BB202D4B396B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaEAD", "AulaEAD\AulaEAD.csproj", "{1D6DFACB-4F8D-452A-82F1-89CF57411F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosExtras", "ExerciciosExtras\ExerciciosExtras.csproj", "{189DF470-CA1E-42D6-8151-C313DC712D13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C7904C04-C18D-42ED-B8DB-BB202D4B396B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7904C04-C18D-42ED-B8DB-BB202D4B396B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7904C04-C18D-42ED-B8DB-BB202D4B396B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6DFACB-4F8D-452A-82F1-89CF57411F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6DFACB-4F8D-452A-82F1-89CF57411F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6DFACB-4F8D-452A-82F1-89CF57411F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6DFACB-4F8D-452A-82F1-89CF57411F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189DF470-CA1E-42D6-8151-C313DC712D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189DF470-CA1E-42D6-8151-C313DC712D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189DF470-CA1E-42D6-8151-C313DC712D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189DF470-CA1E-42D6-8151-C313DC712D13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+C:\GitEntra21\ExerciciosExtras\bin\Debug\ExerciciosExtras.exe.config
+C:\GitEntra21\ExerciciosExtras\bin\Debug\ExerciciosExtras.exe
+C:\GitEntra21\ExerciciosExtras\bin\Debug\ExerciciosExtras.pdb
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.csprojAssemblyReference.cache
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.Properties.Resources.resources
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.csproj.GenerateResource.cache
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.csproj.CoreCompileInputs.cache
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.exe
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.pdb
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.Ex1_LacoRepeticao.resources
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.Ex2_LacoRepeticao.resources
+C:\GitEntra21\ExerciciosExtras\obj\Debug\ExerciciosExtras.Ex3_LacoRepeticao.resources
