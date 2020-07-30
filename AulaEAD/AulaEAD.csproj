@@ -46,14 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LacoDeRepeticao.cs">
+    <Compile Include="PlacarBasqueteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LacoDeRepeticao.Designer.cs">
-      <DependentUpon>LacoDeRepeticao.cs</DependentUpon>
+    <Compile Include="PlacarBasqueteForm.Designer.cs">
+      <DependentUpon>PlacarBasqueteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VariavelGlobal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VariavelGlobal.Designer.cs">
+      <DependentUpon>VariavelGlobal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PlacarBasqueteForm.resx">
+      <DependentUpon>PlacarBasqueteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VariavelGlobal.resx">
+      <DependentUpon>VariavelGlobal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

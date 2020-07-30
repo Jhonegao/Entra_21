@@ -1,0 +1,11 @@
+C:\GitEntra21\AulaEAD\bin\Debug\AulaEAD.exe.config
+C:\GitEntra21\AulaEAD\bin\Debug\AulaEAD.exe
+C:\GitEntra21\AulaEAD\bin\Debug\AulaEAD.pdb
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.csprojAssemblyReference.cache
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.Properties.Resources.resources
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.VariavelDaClasse.resources
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.csproj.GenerateResource.cache
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.csproj.CoreCompileInputs.cache
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.exe
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.pdb
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.PlacarBasqueteForm.resources

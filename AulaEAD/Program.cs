@@ -16,7 +16,7 @@ namespace AulaEAD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LacoDeRepeticao());
+            Application.Run(new PlacarBasqueteForm());
         }
     }
 }
