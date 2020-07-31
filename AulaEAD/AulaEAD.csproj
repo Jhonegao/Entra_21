@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtividadeLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtividadeLista.Designer.cs">
+      <DependentUpon>AtividadeLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlacarBasqueteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VetorArrayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VetorArrayList.Designer.cs">
+      <DependentUpon>VetorArrayList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AtividadeLista.resx">
+      <DependentUpon>AtividadeLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlacarBasqueteForm.resx">
       <DependentUpon>PlacarBasqueteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,9 +86,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VariavelGlobal.resx">
       <DependentUpon>VariavelGlobal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VetorArrayList.resx">
+      <DependentUpon>VetorArrayList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +106,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="teams\team24.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

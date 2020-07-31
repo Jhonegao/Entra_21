@@ -9,3 +9,5 @@ C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.csproj.CoreCompileInputs.cache
 C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.exe
 C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.pdb
 C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.PlacarBasqueteForm.resources
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.AtividadeLista.resources
+C:\GitEntra21\AulaEAD\obj\Debug\AulaEAD.VetorArrayList.resources
