@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabCadastro = new System.Windows.Forms.TabPage();
+            this.btnIniciarVotacao = new System.Windows.Forms.Button();
             this.btnEscolherImagem = new System.Windows.Forms.Button();
             this.btnCadastroOK = new System.Windows.Forms.Button();
             this.btnCadastroCancel = new System.Windows.Forms.Button();
@@ -47,25 +48,25 @@
             this.txtNomeCandidato = new System.Windows.Forms.TextBox();
             this.pbFotosCandidatos = new System.Windows.Forms.PictureBox();
             this.tabVotar = new System.Windows.Forms.TabPage();
-            this.tabResultado = new System.Windows.Forms.TabPage();
+            this.cbConfirma = new System.Windows.Forms.CheckBox();
+            this.lbNomeVoto = new System.Windows.Forms.Label();
+            this.pbVotacaoImagem = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEntradaNum = new System.Windows.Forms.TextBox();
+            this.btnVotar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.dgElegiveis = new System.Windows.Forms.DataGridView();
             this.c_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnVotar = new System.Windows.Forms.Button();
-            this.txtEntradaNum = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pbVotacaoImagem = new System.Windows.Forms.PictureBox();
-            this.lbNomeVoto = new System.Windows.Forms.Label();
-            this.btnIniciarVotacao = new System.Windows.Forms.Button();
+            this.tabResultado = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabs.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotosCandidatos)).BeginInit();
             this.tabVotar.SuspendLayout();
-            this.tabResultado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgElegiveis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVotacaoImagem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgElegiveis)).BeginInit();
+            this.tabResultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,17 @@
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "CADASTRO";
             this.tabCadastro.UseVisualStyleBackColor = true;
+            // 
+            // btnIniciarVotacao
+            // 
+            this.btnIniciarVotacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarVotacao.Location = new System.Drawing.Point(286, 293);
+            this.btnIniciarVotacao.Name = "btnIniciarVotacao";
+            this.btnIniciarVotacao.Size = new System.Drawing.Size(75, 99);
+            this.btnIniciarVotacao.TabIndex = 15;
+            this.btnIniciarVotacao.Text = "Iniciar votação";
+            this.btnIniciarVotacao.UseVisualStyleBackColor = true;
+            this.btnIniciarVotacao.Click += new System.EventHandler(this.btnIniciarVotacao_Click);
             // 
             // btnEscolherImagem
             // 
@@ -235,6 +247,7 @@
             // 
             // tabVotar
             // 
+            this.tabVotar.Controls.Add(this.cbConfirma);
             this.tabVotar.Controls.Add(this.lbNomeVoto);
             this.tabVotar.Controls.Add(this.pbVotacaoImagem);
             this.tabVotar.Controls.Add(this.label4);
@@ -250,16 +263,76 @@
             this.tabVotar.Text = "VOTAR";
             this.tabVotar.UseVisualStyleBackColor = true;
             // 
-            // tabResultado
+            // cbConfirma
             // 
-            this.tabResultado.Controls.Add(this.chart1);
-            this.tabResultado.Location = new System.Drawing.Point(4, 22);
-            this.tabResultado.Name = "tabResultado";
-            this.tabResultado.Padding = new System.Windows.Forms.Padding(3);
-            this.tabResultado.Size = new System.Drawing.Size(394, 427);
-            this.tabResultado.TabIndex = 2;
-            this.tabResultado.Text = "RESULTADO";
-            this.tabResultado.UseVisualStyleBackColor = true;
+            this.cbConfirma.AutoSize = true;
+            this.cbConfirma.BackColor = System.Drawing.Color.Transparent;
+            this.cbConfirma.Location = new System.Drawing.Point(134, 294);
+            this.cbConfirma.Name = "cbConfirma";
+            this.cbConfirma.Size = new System.Drawing.Size(76, 17);
+            this.cbConfirma.TabIndex = 7;
+            this.cbConfirma.Text = "Confirmar?";
+            this.cbConfirma.UseVisualStyleBackColor = false;
+            this.cbConfirma.CheckedChanged += new System.EventHandler(this.cbConfirma_CheckedChanged);
+            // 
+            // lbNomeVoto
+            // 
+            this.lbNomeVoto.AutoSize = true;
+            this.lbNomeVoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeVoto.Location = new System.Drawing.Point(135, 256);
+            this.lbNomeVoto.Name = "lbNomeVoto";
+            this.lbNomeVoto.Size = new System.Drawing.Size(0, 20);
+            this.lbNomeVoto.TabIndex = 6;
+            // 
+            // pbVotacaoImagem
+            // 
+            this.pbVotacaoImagem.Location = new System.Drawing.Point(134, 6);
+            this.pbVotacaoImagem.Name = "pbVotacaoImagem";
+            this.pbVotacaoImagem.Size = new System.Drawing.Size(257, 247);
+            this.pbVotacaoImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVotacaoImagem.TabIndex = 5;
+            this.pbVotacaoImagem.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(153, 330);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Insira o numero do candidato";
+            // 
+            // txtEntradaNum
+            // 
+            this.txtEntradaNum.Location = new System.Drawing.Point(213, 350);
+            this.txtEntradaNum.Name = "txtEntradaNum";
+            this.txtEntradaNum.Size = new System.Drawing.Size(75, 20);
+            this.txtEntradaNum.TabIndex = 3;
+            this.txtEntradaNum.TextChanged += new System.EventHandler(this.txtEntradaNum_TextChanged);
+            // 
+            // btnVotar
+            // 
+            this.btnVotar.BackColor = System.Drawing.Color.Silver;
+            this.btnVotar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnVotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVotar.Location = new System.Drawing.Point(213, 376);
+            this.btnVotar.Name = "btnVotar";
+            this.btnVotar.Size = new System.Drawing.Size(75, 23);
+            this.btnVotar.TabIndex = 2;
+            this.btnVotar.Text = "VOTAR";
+            this.btnVotar.UseVisualStyleBackColor = false;
+            this.btnVotar.Click += new System.EventHandler(this.btnVotar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Lista dos Elegiveis";
             // 
             // dgElegiveis
             // 
@@ -268,14 +341,14 @@
             this.dgElegiveis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.c_Nome,
             this.c_Numero});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgElegiveis.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgElegiveis.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgElegiveis.Location = new System.Drawing.Point(6, 23);
             this.dgElegiveis.Name = "dgElegiveis";
             this.dgElegiveis.ReadOnly = true;
@@ -300,88 +373,29 @@
             this.c_Numero.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.c_Numero.Width = 40;
             // 
-            // label2
+            // tabResultado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lista dos Elegiveis";
-            // 
-            // btnVotar
-            // 
-            this.btnVotar.BackColor = System.Drawing.Color.Silver;
-            this.btnVotar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnVotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVotar.Location = new System.Drawing.Point(213, 376);
-            this.btnVotar.Name = "btnVotar";
-            this.btnVotar.Size = new System.Drawing.Size(75, 23);
-            this.btnVotar.TabIndex = 2;
-            this.btnVotar.Text = "VOTAR";
-            this.btnVotar.UseVisualStyleBackColor = false;
-            this.btnVotar.Click += new System.EventHandler(this.btnVotar_Click);
-            // 
-            // txtEntradaNum
-            // 
-            this.txtEntradaNum.Location = new System.Drawing.Point(213, 350);
-            this.txtEntradaNum.Name = "txtEntradaNum";
-            this.txtEntradaNum.Size = new System.Drawing.Size(75, 20);
-            this.txtEntradaNum.TabIndex = 3;
-            this.txtEntradaNum.TextChanged += new System.EventHandler(this.txtEntradaNum_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(153, 330);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Insira o numero do candidato";
-            // 
-            // pbVotacaoImagem
-            // 
-            this.pbVotacaoImagem.Location = new System.Drawing.Point(134, 6);
-            this.pbVotacaoImagem.Name = "pbVotacaoImagem";
-            this.pbVotacaoImagem.Size = new System.Drawing.Size(257, 247);
-            this.pbVotacaoImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbVotacaoImagem.TabIndex = 5;
-            this.pbVotacaoImagem.TabStop = false;
-            // 
-            // lbNomeVoto
-            // 
-            this.lbNomeVoto.AutoSize = true;
-            this.lbNomeVoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeVoto.Location = new System.Drawing.Point(135, 256);
-            this.lbNomeVoto.Name = "lbNomeVoto";
-            this.lbNomeVoto.Size = new System.Drawing.Size(0, 20);
-            this.lbNomeVoto.TabIndex = 6;
-            // 
-            // btnIniciarVotacao
-            // 
-            this.btnIniciarVotacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarVotacao.Location = new System.Drawing.Point(286, 293);
-            this.btnIniciarVotacao.Name = "btnIniciarVotacao";
-            this.btnIniciarVotacao.Size = new System.Drawing.Size(75, 99);
-            this.btnIniciarVotacao.TabIndex = 15;
-            this.btnIniciarVotacao.Text = "Iniciar votação";
-            this.btnIniciarVotacao.UseVisualStyleBackColor = true;
-            this.btnIniciarVotacao.Click += new System.EventHandler(this.btnIniciarVotacao_Click);
+            this.tabResultado.Controls.Add(this.chart1);
+            this.tabResultado.Location = new System.Drawing.Point(4, 22);
+            this.tabResultado.Name = "tabResultado";
+            this.tabResultado.Padding = new System.Windows.Forms.Padding(3);
+            this.tabResultado.Size = new System.Drawing.Size(394, 427);
+            this.tabResultado.TabIndex = 2;
+            this.tabResultado.Text = "RESULTADO";
+            this.tabResultado.UseVisualStyleBackColor = true;
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(42, 68);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(300, 300);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -400,9 +414,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFotosCandidatos)).EndInit();
             this.tabVotar.ResumeLayout(false);
             this.tabVotar.PerformLayout();
-            this.tabResultado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgElegiveis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVotacaoImagem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgElegiveis)).EndInit();
+            this.tabResultado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
@@ -437,6 +451,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn c_Numero;
         private System.Windows.Forms.Button btnIniciarVotacao;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.CheckBox cbConfirma;
     }
 }
 

@@ -23,6 +23,20 @@ namespace VoteSystem
             tabs.TabPages.Remove(tabVotar);
             tabs.TabPages.Remove(tabResultado);
             btnIniciarVotacao.Enabled = false;
+            btnVotar.Enabled = false;
+        }
+        private void limparVotacao(bool completo)
+        {
+            if (completo)
+            {
+            txtEntradaNum.Clear();
+            }
+            pbVotacaoImagem.Image = null;
+            lbNomeVoto.Text = null;
+            btnVotar.Enabled = false;
+            cbConfirma.Checked = false;
+            txtEntradaNum.Focus();
+            cbConfirma.Visible = false;
         }
         public void atualizarLista()
         {
@@ -31,6 +45,7 @@ namespace VoteSystem
                 dgElegiveis.Rows.Add(list_Elegiveis.ElementAt(i), list_Elegiveis.ElementAt(i + 1));
             }
             dgElegiveis.AllowUserToAddRows = false;
+            cbConfirma.Visible = false;
         }
         //funcao para habilitar os botoes e limpar caixas de texto
         public void mostrarBotoes(bool set)
@@ -188,11 +203,11 @@ namespace VoteSystem
             tabs.TabPages.Remove(tabCadastro);
         }
         bool checkStatus = false;
+        bool checkConfirmar = false;
         int posicaoVoto = 0;
         private void txtEntradaNum_TextChanged(object sender, EventArgs e)
         {
-            pbVotacaoImagem.Image = null;
-            lbNomeVoto.Text = null;
+            limparVotacao(false);
             int indexador = 0;
             for (int i = 1; i < list_Elegiveis.Count; i += 2)
             {
@@ -202,20 +217,38 @@ namespace VoteSystem
                     lbNomeVoto.Text = list_Elegiveis.ElementAt(i - 1);
                     checkStatus = true;
                     posicaoVoto = indexador;
+                    cbConfirma.Visible = true;
                     return;
                 }
                 indexador++;
             }
             checkStatus = false;
+            cbConfirma.Visible = false;
         }
         private void btnVotar_Click(object sender, EventArgs e)
         {
-            if (checkStatus)
+            if (checkStatus && checkConfirmar)
             {
                 list_Votos.Insert(posicaoVoto, list_Votos.ElementAt(posicaoVoto) + 1);
                 MessageBox.Show("ok");
+                limparVotacao(true);
             }
             MessageBox.Show($"votacao esta em {list_Votos.ElementAt(posicaoVoto)}");
+        }
+        private void cbConfirma_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbConfirma.Checked)
+            {
+                checkConfirmar = true;
+                cbConfirma.BackColor = System.Drawing.Color.LightGreen;
+                btnVotar.Enabled = true;
+            }
+            else
+            {
+                checkConfirmar = false;
+                cbConfirma.BackColor = System.Drawing.Color.Transparent;
+                btnVotar.Enabled = false;
+            }
         }
     }
 }
