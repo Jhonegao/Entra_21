@@ -1,0 +1,10 @@
+C:\GitEntra21\VoteSystem\bin\Debug\VoteSystem.exe.config
+C:\GitEntra21\VoteSystem\bin\Debug\VoteSystem.exe
+C:\GitEntra21\VoteSystem\bin\Debug\VoteSystem.pdb
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.csprojAssemblyReference.cache
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.Properties.Resources.resources
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.TelaInicial.resources
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.csproj.GenerateResource.cache
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.csproj.CoreCompileInputs.cache
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.exe
+C:\GitEntra21\VoteSystem\obj\Debug\VoteSystem.pdb

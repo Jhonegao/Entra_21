@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7904C04-C18D-42ED-B8DB-BB202D4B396B}</ProjectGuid>
+    <ProjectGuid>{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>JogoDaForca</RootNamespace>
-    <AssemblyName>JogoDaForca</AssemblyName>
+    <RootNamespace>VoteSystem</RootNamespace>
+    <AssemblyName>VoteSystem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
@@ -79,6 +81,50 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="imgs\pic1_BrunoHenrique.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic2_Marcelo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic3_BrunoFelipe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic4_Kaue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic5_Gustavo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic7_Pablo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic8_Duda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic9_Felipe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic10_Bia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic11_Helo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic12_Luiz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic13_Joana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic14_Vinicius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic15_Katia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\pic16_Alan.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

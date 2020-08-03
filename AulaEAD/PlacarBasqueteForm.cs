@@ -136,7 +136,7 @@ namespace AulaEAD
             cronometro = TimeSpan.FromMinutes(12);
             tempo.Start();
         }
-        //criar demais botoes
+        //criar demais botoes, pause, desabilitar selecao de times apos start(verificar decrementacao de pontos).
         private void tempo_Tick(object sender, EventArgs e)
         {
             cronometro = cronometro.Subtract(TimeSpan.FromSeconds(1));

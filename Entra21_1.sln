@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaEAD", "AulaEAD\AulaEAD.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosExtras", "ExerciciosExtras\ExerciciosExtras.csproj", "{189DF470-CA1E-42D6-8151-C313DC712D13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoteSystem", "VoteSystem\VoteSystem.csproj", "{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{189DF470-CA1E-42D6-8151-C313DC712D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{189DF470-CA1E-42D6-8151-C313DC712D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{189DF470-CA1E-42D6-8151-C313DC712D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
