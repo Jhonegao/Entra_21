@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabCadastro = new System.Windows.Forms.TabPage();
             this.btnIniciarVotacao = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.c_Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabResultado = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lbNumMinimo = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotosCandidatos)).BeginInit();
@@ -84,6 +85,7 @@
             // 
             // tabCadastro
             // 
+            this.tabCadastro.Controls.Add(this.lbNumMinimo);
             this.tabCadastro.Controls.Add(this.btnIniciarVotacao);
             this.tabCadastro.Controls.Add(this.btnEscolherImagem);
             this.tabCadastro.Controls.Add(this.btnCadastroOK);
@@ -112,7 +114,7 @@
             this.btnIniciarVotacao.Name = "btnIniciarVotacao";
             this.btnIniciarVotacao.Size = new System.Drawing.Size(75, 99);
             this.btnIniciarVotacao.TabIndex = 15;
-            this.btnIniciarVotacao.Text = "Iniciar votação";
+            this.btnIniciarVotacao.Text = "Iniciar votação*";
             this.btnIniciarVotacao.UseVisualStyleBackColor = true;
             this.btnIniciarVotacao.Click += new System.EventHandler(this.btnIniciarVotacao_Click);
             // 
@@ -341,14 +343,14 @@
             this.dgElegiveis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.c_Nome,
             this.c_Numero});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgElegiveis.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgElegiveis.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgElegiveis.Location = new System.Drawing.Point(6, 23);
             this.dgElegiveis.Name = "dgElegiveis";
             this.dgElegiveis.ReadOnly = true;
@@ -386,19 +388,28 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(42, 68);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(300, 300);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            // 
+            // lbNumMinimo
+            // 
+            this.lbNumMinimo.AutoSize = true;
+            this.lbNumMinimo.Location = new System.Drawing.Point(109, 395);
+            this.lbNumMinimo.Name = "lbNumMinimo";
+            this.lbNumMinimo.Size = new System.Drawing.Size(285, 13);
+            this.lbNumMinimo.TabIndex = 16;
+            this.lbNumMinimo.Text = "*Necessário no minimo 2 candidados para iniciar votações ";
             // 
             // TelaInicial
             // 
@@ -452,6 +463,7 @@
         private System.Windows.Forms.Button btnIniciarVotacao;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.CheckBox cbConfirma;
+        private System.Windows.Forms.Label lbNumMinimo;
     }
 }
 

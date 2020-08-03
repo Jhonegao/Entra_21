@@ -103,6 +103,7 @@ namespace VoteSystem
             txtNomeCandidato.Text = list_NomeCandidatos.ElementAt(contadorAuxiliar);
             txtNumeroCandidato.Text = list_NumerosCandidatos.ElementAt(contadorAuxiliar).ToString();
         }
+        //cadastro de um novo candidato, com checagem dos numeros ja existende pre cadastrados.
         private void btnCadastrarNovo_Click(object sender, EventArgs e)
         {
             mostrarBotoes(true);
@@ -110,7 +111,6 @@ namespace VoteSystem
             txtNomeCandidato.Focus();
             txtNumeroCandidato.Enabled = true;
         }
-        //cadastro de um novo candidato, com checagem dos numeros ja existende pre cadastrados.
         private void btnCadastroOK_Click(object sender, EventArgs e)
         {
             bool checkagem = true;
