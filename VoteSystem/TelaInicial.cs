@@ -229,7 +229,8 @@ namespace VoteSystem
         {
             if (checkStatus && checkConfirmar)
             {
-                list_Votos.Insert(posicaoVoto, list_Votos.ElementAt(posicaoVoto) + 1);
+                list_Votos[posicaoVoto] = list_Votos[posicaoVoto] + 1;
+                //list_Votos.Insert(posicaoVoto, (list_Votos.ElementAt(posicaoVoto) + 1)); -->>verificar por que nao funcionou
                 MessageBox.Show("ok");
                 limparVotacao(true);
             }
