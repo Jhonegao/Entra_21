@@ -13,6 +13,7 @@ using VoteSystem.Properties;
 
 namespace VoteSystem
 {
+    //Criar um sistema de votos sem dictionary e sem classes, sistema simples deve conter um opcao de cadastro dos candidatos, uma area para votacao e depois mostrar qual o mais votado.
     public partial class TelaInicial : Form
     {
         public TelaInicial()
@@ -279,11 +280,6 @@ namespace VoteSystem
             tabs.TabPages.Add(tabResultado);
             tabs.TabPages.Remove(tabVotar);
             popularGrafico(dgElegiveis.Rows.Count);
-            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[0].Cells[0].Value, dgElegiveis.Rows[0].Cells[2].Value);
-            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[1].Cells[0].Value, dgElegiveis.Rows[1].Cells[2].Value);
-            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[2].Cells[0].Value, dgElegiveis.Rows[2].Cells[2].Value);            
-           // graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[3].Cells[0].Value, dgElegiveis.Rows[3].Cells[2].Value);
-            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[4].Cells[0].Value, dgElegiveis.Rows[4].Cells[2].Value);
         }
     }
 }
