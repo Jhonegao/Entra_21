@@ -188,7 +188,10 @@ namespace VoteSystem
                     list_Elegiveis.Add(txtNumeroCandidato.Text);
                     list_Votos.Add(0);
                     list_VotacaoImagens.Add(pbFotosCandidatos.Image);
-                    btnIniciarVotacao.Enabled = true;
+                    if (qntCanditados > 1)
+                    {
+                        btnIniciarVotacao.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -262,21 +265,12 @@ namespace VoteSystem
                 btnVotar.Enabled = false;
             }
         }
-        //criando serie
-        private void criarSeries(int candidatos)
+        //metodo popular grafico easy
+        private void popularGrafico(int candidatos)
         {
             for (int i = 0; i < candidatos; i++)
             {
-            Series serie = new Series();
-            serie.ChartArea = "ChartArea1";
-            serie.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-            serie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serie.IsValueShownAsLabel = true;
-            serie.LabelFormat = "#";
-            serie.Legend = "";
-            serie.Name = dgElegiveis.Rows[i].Cells[0].Value.ToString();
-            graphPie.Series.Add(serie);
-            graphPie.Series[dgElegiveis.Rows[i].Cells[0].Value.ToString()].Points.AddXY(dgElegiveis.Rows[i].Cells[0].Value, dgElegiveis.Rows[i].Cells[2].Value);
+                graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[i].Cells[0].Value, dgElegiveis.Rows[i].Cells[2].Value);
             }
         }
         private void btnFinalizar_Click(object sender, EventArgs e)
@@ -284,7 +278,7 @@ namespace VoteSystem
             this.ClientSize = new System.Drawing.Size(940, 680);
             tabs.TabPages.Add(tabResultado);
             tabs.TabPages.Remove(tabVotar);
-            criarSeries(dgElegiveis.Rows.Count);
+            popularGrafico(dgElegiveis.Rows.Count);
             //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[0].Cells[0].Value, dgElegiveis.Rows[0].Cells[2].Value);
             //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[1].Cells[0].Value, dgElegiveis.Rows[1].Cells[2].Value);
             //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[2].Cells[0].Value, dgElegiveis.Rows[2].Cells[2].Value);            

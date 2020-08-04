@@ -83,7 +83,7 @@
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(923, 637);
+            this.tabs.Size = new System.Drawing.Size(407, 490);
             this.tabs.TabIndex = 0;
             // 
             // tabCadastro
@@ -106,7 +106,7 @@
             this.tabCadastro.Location = new System.Drawing.Point(4, 22);
             this.tabCadastro.Name = "tabCadastro";
             this.tabCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCadastro.Size = new System.Drawing.Size(394, 462);
+            this.tabCadastro.Size = new System.Drawing.Size(399, 464);
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "CADASTRO";
             this.tabCadastro.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             // lbMaxCandidatos
             // 
             this.lbMaxCandidatos.AutoSize = true;
-            this.lbMaxCandidatos.Location = new System.Drawing.Point(219, 277);
+            this.lbMaxCandidatos.Location = new System.Drawing.Point(203, 277);
             this.lbMaxCandidatos.Name = "lbMaxCandidatos";
             this.lbMaxCandidatos.Size = new System.Drawing.Size(172, 13);
             this.lbMaxCandidatos.TabIndex = 17;
@@ -123,7 +123,7 @@
             // lbNumMinimo
             // 
             this.lbNumMinimo.AutoSize = true;
-            this.lbNumMinimo.Location = new System.Drawing.Point(39, 395);
+            this.lbNumMinimo.Location = new System.Drawing.Point(23, 395);
             this.lbNumMinimo.Name = "lbNumMinimo";
             this.lbNumMinimo.Size = new System.Drawing.Size(347, 13);
             this.lbNumMinimo.TabIndex = 16;
@@ -142,7 +142,7 @@
             // 
             // btnEscolherImagem
             // 
-            this.btnEscolherImagem.Location = new System.Drawing.Point(180, 185);
+            this.btnEscolherImagem.Location = new System.Drawing.Point(194, 182);
             this.btnEscolherImagem.Name = "btnEscolherImagem";
             this.btnEscolherImagem.Size = new System.Drawing.Size(96, 23);
             this.btnEscolherImagem.TabIndex = 14;
@@ -190,7 +190,7 @@
             // btnPrevious
             // 
             this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.Location = new System.Drawing.Point(4, 111);
+            this.btnPrevious.Location = new System.Drawing.Point(18, 108);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(75, 23);
             this.btnPrevious.TabIndex = 10;
@@ -201,7 +201,7 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(285, 111);
+            this.btnNext.Location = new System.Drawing.Point(299, 108);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 9;
@@ -262,7 +262,7 @@
             // 
             // pbFotosCandidatos
             // 
-            this.pbFotosCandidatos.Location = new System.Drawing.Point(85, 20);
+            this.pbFotosCandidatos.Location = new System.Drawing.Point(99, 17);
             this.pbFotosCandidatos.Name = "pbFotosCandidatos";
             this.pbFotosCandidatos.Size = new System.Drawing.Size(194, 192);
             this.pbFotosCandidatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -283,7 +283,7 @@
             this.tabVotar.Location = new System.Drawing.Point(4, 22);
             this.tabVotar.Name = "tabVotar";
             this.tabVotar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVotar.Size = new System.Drawing.Size(394, 462);
+            this.tabVotar.Size = new System.Drawing.Size(399, 464);
             this.tabVotar.TabIndex = 1;
             this.tabVotar.Text = "VOTAR";
             this.tabVotar.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@
             this.tabResultado.Location = new System.Drawing.Point(4, 22);
             this.tabResultado.Name = "tabResultado";
             this.tabResultado.Padding = new System.Windows.Forms.Padding(3);
-            this.tabResultado.Size = new System.Drawing.Size(915, 611);
+            this.tabResultado.Size = new System.Drawing.Size(399, 464);
             this.tabResultado.TabIndex = 2;
             this.tabResultado.Text = "RESULTADO";
             this.tabResultado.UseVisualStyleBackColor = true;
@@ -463,7 +463,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 637);
+            this.ClientSize = new System.Drawing.Size(407, 490);
             this.Controls.Add(this.tabs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
