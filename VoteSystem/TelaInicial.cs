@@ -66,6 +66,13 @@ namespace VoteSystem
             //resetando a listagem de amostra para o primeiro item do itendex
             contadorAuxiliar = -1;
         }
+        private void popularGrafico(int candidatos)
+        {
+            for (int i = 0; i < candidatos; i++)
+            {
+                graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[i].Cells[0].Value, dgElegiveis.Rows[i].Cells[2].Value);
+            }
+        }
         //iniciando listas necessarias
         //lista de coligacoes pré setadas
         //iniciando lista com nome de 15 candidatos.
@@ -267,13 +274,6 @@ namespace VoteSystem
             }
         }
         //metodo popular grafico easy
-        private void popularGrafico(int candidatos)
-        {
-            for (int i = 0; i < candidatos; i++)
-            {
-                graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[i].Cells[0].Value, dgElegiveis.Rows[i].Cells[2].Value);
-            }
-        }
         private void btnFinalizar_Click(object sender, EventArgs e)
         {            
             this.ClientSize = new System.Drawing.Size(940, 680);
