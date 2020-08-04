@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using VoteSystem.Properties;
 
 namespace VoteSystem
@@ -25,6 +26,7 @@ namespace VoteSystem
             btnIniciarVotacao.Enabled = false;
             btnVotar.Enabled = false;
         }
+        //System.Windows.Forms.DataVisualization.Charting.Series serieTest = new System.Windows.Forms.DataVisualization.Charting.Series();
         private void limparVotacao(bool completo)
         {
             if (completo)
@@ -40,9 +42,11 @@ namespace VoteSystem
         }
         public void atualizarLista()
         {
+            int votosController = 0;
             for (int i = 0; i < list_Elegiveis.Count; i = i+2)
             {
-                dgElegiveis.Rows.Add(list_Elegiveis.ElementAt(i), list_Elegiveis.ElementAt(i + 1));
+                dgElegiveis.Rows.Add(list_Elegiveis.ElementAt(i), list_Elegiveis.ElementAt(i + 1), list_Votos.ElementAt(votosController));
+                votosController++;
             }
             dgElegiveis.AllowUserToAddRows = false;
             cbConfirma.Visible = false;
@@ -61,7 +65,6 @@ namespace VoteSystem
             //resetando a listagem de amostra para o primeiro item do itendex
             contadorAuxiliar = -1;
         }
-
         //iniciando listas necessarias
         //lista de coligacoes pré setadas
         //iniciando lista com nome de 15 candidatos.
@@ -70,7 +73,7 @@ namespace VoteSystem
         List<Image> list_ImagensCandidatos = new List<Image> { Resources.pic1_BrunoHenrique, Resources.pic10_Bia, Resources.pic11_Helo, Resources.pic12_Luiz, Resources.pic13_Joana, Resources.pic14_Vinicius,
         Resources.pic15_Katia, Resources.pic16_Alan, Resources.pic2_Marcelo, Resources.pic3_BrunoFelipe, Resources.pic4_Kaue, Resources.pic5_Gustavo, Resources.pic7_Pablo, Resources.pic8_Duda, Resources.pic9_Felipe,};
         //inicia numero dos candidatos
-        List<int> list_NumerosCandidatos = new List<int> { 11, 10, 44, 3, 8, 1, 7, 88, 9, 180, 118, 12, 183, 14, 154 };
+        List<int> list_NumerosCandidatos = new List<int> { 11, 10, 44, 3, 8, 1, 7, 88, 9, 180, 17, 12, 183, 14, 154 };
         //iniciando uma lista com votos e dos candidatos para votacao
         List<int> list_Votos = new List<int>();
         List<string> list_Elegiveis = new List<string>();
@@ -79,7 +82,6 @@ namespace VoteSystem
         int contadorAuxiliar = -1;
         bool temImagem = false;
         int qntCanditados = 0;
-
         //iniciando logica para adicionar os candidatos ja pré cadastrados
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -178,22 +180,26 @@ namespace VoteSystem
                         return;
                     }
                 }
-                if (!checkDual)
+                if (!checkDual && qntCanditados < 10)
                 {
+                    qntCanditados++;
+                    lbMaxCandidatos.Text = $"Quantidade atual {qntCanditados} /10 candidatos";
                     list_Elegiveis.Add(txtNomeCandidato.Text);
                     list_Elegiveis.Add(txtNumeroCandidato.Text);
                     list_Votos.Add(0);
                     list_VotacaoImagens.Add(pbFotosCandidatos.Image);
-                    qntCanditados++;
+                    btnIniciarVotacao.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show($"Numero maximo de candidatos elegiveis atingido.");
+                    btnAdicionarVotacao.Visible = false;
+                    return;
                 }
             }
             else
             {
                 MessageBox.Show("wtf");
-            }
-            if (qntCanditados > 1)
-            {
-                btnIniciarVotacao.Enabled = true;                
             }
         }
         private void btnIniciarVotacao_Click(object sender, EventArgs e)
@@ -205,6 +211,7 @@ namespace VoteSystem
         bool checkStatus = false;
         bool checkConfirmar = false;
         int posicaoVoto = 0;
+        int totalVotos = 0;
         private void txtEntradaNum_TextChanged(object sender, EventArgs e)
         {
             limparVotacao(false);
@@ -227,15 +234,19 @@ namespace VoteSystem
         }
         private void btnVotar_Click(object sender, EventArgs e)
         {
+            //reforcando checagem para votos.
             if (checkStatus && checkConfirmar)
             {
-                list_Votos[posicaoVoto] = list_Votos[posicaoVoto] + 1;
                 //list_Votos.Insert(posicaoVoto, (list_Votos.ElementAt(posicaoVoto) + 1)); -->>verificar por que nao funcionou
-                MessageBox.Show("ok");
+                list_Votos[posicaoVoto] = list_Votos[posicaoVoto] + 1;
+                dgElegiveis.Rows[posicaoVoto].Cells[2].Value = list_Votos[posicaoVoto];
+                totalVotos++;
+                MessageBox.Show($"Voto registrado para {dgElegiveis.Rows[posicaoVoto].Cells[0].Value.ToString()}");
                 limparVotacao(true);
+                btnFinalizar.Enabled = true;
             }
-            MessageBox.Show($"votacao esta em {list_Votos.ElementAt(posicaoVoto)}");
         }
+        //verificar se é possivel aplicar a checkbox direto na condicao
         private void cbConfirma_CheckedChanged(object sender, EventArgs e)
         {
             if (cbConfirma.Checked)
@@ -250,6 +261,35 @@ namespace VoteSystem
                 cbConfirma.BackColor = System.Drawing.Color.Transparent;
                 btnVotar.Enabled = false;
             }
+        }
+        //criando serie
+        private void criarSeries(int candidatos)
+        {
+            for (int i = 0; i < candidatos; i++)
+            {
+            Series serie = new Series();
+            serie.ChartArea = "ChartArea1";
+            serie.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            serie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serie.IsValueShownAsLabel = true;
+            serie.LabelFormat = "#";
+            serie.Legend = "";
+            serie.Name = dgElegiveis.Rows[i].Cells[0].Value.ToString();
+            graphPie.Series.Add(serie);
+            graphPie.Series[dgElegiveis.Rows[i].Cells[0].Value.ToString()].Points.AddXY(dgElegiveis.Rows[i].Cells[0].Value, dgElegiveis.Rows[i].Cells[2].Value);
+            }
+        }
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {            
+            this.ClientSize = new System.Drawing.Size(940, 680);
+            tabs.TabPages.Add(tabResultado);
+            tabs.TabPages.Remove(tabVotar);
+            criarSeries(dgElegiveis.Rows.Count);
+            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[0].Cells[0].Value, dgElegiveis.Rows[0].Cells[2].Value);
+            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[1].Cells[0].Value, dgElegiveis.Rows[1].Cells[2].Value);
+            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[2].Cells[0].Value, dgElegiveis.Rows[2].Cells[2].Value);            
+           // graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[3].Cells[0].Value, dgElegiveis.Rows[3].Cells[2].Value);
+            //graphPie.Series["Candidatos"].Points.AddXY(dgElegiveis.Rows[4].Cells[0].Value, dgElegiveis.Rows[4].Cells[2].Value);
         }
     }
 }

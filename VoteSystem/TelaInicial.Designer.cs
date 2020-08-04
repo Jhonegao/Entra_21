@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabCadastro = new System.Windows.Forms.TabPage();
+            this.lbMaxCandidatos = new System.Windows.Forms.Label();
+            this.lbNumMinimo = new System.Windows.Forms.Label();
             this.btnIniciarVotacao = new System.Windows.Forms.Button();
             this.btnEscolherImagem = new System.Windows.Forms.Button();
             this.btnCadastroOK = new System.Windows.Forms.Button();
@@ -48,6 +50,7 @@
             this.txtNomeCandidato = new System.Windows.Forms.TextBox();
             this.pbFotosCandidatos = new System.Windows.Forms.PictureBox();
             this.tabVotar = new System.Windows.Forms.TabPage();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.cbConfirma = new System.Windows.Forms.CheckBox();
             this.lbNomeVoto = new System.Windows.Forms.Label();
             this.pbVotacaoImagem = new System.Windows.Forms.PictureBox();
@@ -58,9 +61,9 @@
             this.dgElegiveis = new System.Windows.Forms.DataGridView();
             this.c_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cVotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabResultado = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lbNumMinimo = new System.Windows.Forms.Label();
+            this.graphPie = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabs.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotosCandidatos)).BeginInit();
@@ -68,7 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbVotacaoImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgElegiveis)).BeginInit();
             this.tabResultado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphPie)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -80,11 +83,12 @@
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(402, 453);
+            this.tabs.Size = new System.Drawing.Size(923, 637);
             this.tabs.TabIndex = 0;
             // 
             // tabCadastro
             // 
+            this.tabCadastro.Controls.Add(this.lbMaxCandidatos);
             this.tabCadastro.Controls.Add(this.lbNumMinimo);
             this.tabCadastro.Controls.Add(this.btnIniciarVotacao);
             this.tabCadastro.Controls.Add(this.btnEscolherImagem);
@@ -102,15 +106,33 @@
             this.tabCadastro.Location = new System.Drawing.Point(4, 22);
             this.tabCadastro.Name = "tabCadastro";
             this.tabCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCadastro.Size = new System.Drawing.Size(394, 427);
+            this.tabCadastro.Size = new System.Drawing.Size(394, 462);
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "CADASTRO";
             this.tabCadastro.UseVisualStyleBackColor = true;
             // 
+            // lbMaxCandidatos
+            // 
+            this.lbMaxCandidatos.AutoSize = true;
+            this.lbMaxCandidatos.Location = new System.Drawing.Point(219, 277);
+            this.lbMaxCandidatos.Name = "lbMaxCandidatos";
+            this.lbMaxCandidatos.Size = new System.Drawing.Size(172, 13);
+            this.lbMaxCandidatos.TabIndex = 17;
+            this.lbMaxCandidatos.Text = "Quantidade atual 0 /10 candidatos";
+            // 
+            // lbNumMinimo
+            // 
+            this.lbNumMinimo.AutoSize = true;
+            this.lbNumMinimo.Location = new System.Drawing.Point(39, 395);
+            this.lbNumMinimo.Name = "lbNumMinimo";
+            this.lbNumMinimo.Size = new System.Drawing.Size(347, 13);
+            this.lbNumMinimo.TabIndex = 16;
+            this.lbNumMinimo.Text = "*Necessário no minimo 2 candidados para iniciar votações ,e máximo 10";
+            // 
             // btnIniciarVotacao
             // 
             this.btnIniciarVotacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarVotacao.Location = new System.Drawing.Point(286, 293);
+            this.btnIniciarVotacao.Location = new System.Drawing.Point(285, 293);
             this.btnIniciarVotacao.Name = "btnIniciarVotacao";
             this.btnIniciarVotacao.Size = new System.Drawing.Size(75, 99);
             this.btnIniciarVotacao.TabIndex = 15;
@@ -249,6 +271,7 @@
             // 
             // tabVotar
             // 
+            this.tabVotar.Controls.Add(this.btnFinalizar);
             this.tabVotar.Controls.Add(this.cbConfirma);
             this.tabVotar.Controls.Add(this.lbNomeVoto);
             this.tabVotar.Controls.Add(this.pbVotacaoImagem);
@@ -260,18 +283,36 @@
             this.tabVotar.Location = new System.Drawing.Point(4, 22);
             this.tabVotar.Name = "tabVotar";
             this.tabVotar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVotar.Size = new System.Drawing.Size(394, 427);
+            this.tabVotar.Size = new System.Drawing.Size(394, 462);
             this.tabVotar.TabIndex = 1;
             this.tabVotar.Text = "VOTAR";
             this.tabVotar.UseVisualStyleBackColor = true;
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnFinalizar.Enabled = false;
+            this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFinalizar.Location = new System.Drawing.Point(8, 296);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(127, 123);
+            this.btnFinalizar.TabIndex = 8;
+            this.btnFinalizar.Text = "Finalizar votações";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // cbConfirma
             // 
             this.cbConfirma.AutoSize = true;
             this.cbConfirma.BackColor = System.Drawing.Color.Transparent;
-            this.cbConfirma.Location = new System.Drawing.Point(134, 294);
+            this.cbConfirma.FlatAppearance.BorderSize = 2;
+            this.cbConfirma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbConfirma.Location = new System.Drawing.Point(307, 353);
             this.cbConfirma.Name = "cbConfirma";
-            this.cbConfirma.Size = new System.Drawing.Size(76, 17);
+            this.cbConfirma.Size = new System.Drawing.Size(74, 17);
             this.cbConfirma.TabIndex = 7;
             this.cbConfirma.Text = "Confirmar?";
             this.cbConfirma.UseVisualStyleBackColor = false;
@@ -288,9 +329,9 @@
             // 
             // pbVotacaoImagem
             // 
-            this.pbVotacaoImagem.Location = new System.Drawing.Point(134, 6);
+            this.pbVotacaoImagem.Location = new System.Drawing.Point(135, 6);
             this.pbVotacaoImagem.Name = "pbVotacaoImagem";
-            this.pbVotacaoImagem.Size = new System.Drawing.Size(257, 247);
+            this.pbVotacaoImagem.Size = new System.Drawing.Size(257, 251);
             this.pbVotacaoImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbVotacaoImagem.TabIndex = 5;
             this.pbVotacaoImagem.TabStop = false;
@@ -299,7 +340,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(153, 330);
+            this.label4.Location = new System.Drawing.Point(171, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(192, 17);
             this.label4.TabIndex = 4;
@@ -307,7 +348,7 @@
             // 
             // txtEntradaNum
             // 
-            this.txtEntradaNum.Location = new System.Drawing.Point(213, 350);
+            this.txtEntradaNum.Location = new System.Drawing.Point(226, 327);
             this.txtEntradaNum.Name = "txtEntradaNum";
             this.txtEntradaNum.Size = new System.Drawing.Size(75, 20);
             this.txtEntradaNum.TabIndex = 3;
@@ -318,7 +359,7 @@
             this.btnVotar.BackColor = System.Drawing.Color.Silver;
             this.btnVotar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btnVotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVotar.Location = new System.Drawing.Point(213, 376);
+            this.btnVotar.Location = new System.Drawing.Point(226, 353);
             this.btnVotar.Name = "btnVotar";
             this.btnVotar.Size = new System.Drawing.Size(75, 23);
             this.btnVotar.TabIndex = 2;
@@ -342,20 +383,21 @@
             this.dgElegiveis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgElegiveis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.c_Nome,
-            this.c_Numero});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgElegiveis.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgElegiveis.Location = new System.Drawing.Point(6, 23);
+            this.c_Numero,
+            this.cVotos});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgElegiveis.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgElegiveis.Location = new System.Drawing.Point(-3, 21);
             this.dgElegiveis.Name = "dgElegiveis";
             this.dgElegiveis.ReadOnly = true;
             this.dgElegiveis.RowHeadersVisible = false;
-            this.dgElegiveis.Size = new System.Drawing.Size(123, 387);
+            this.dgElegiveis.Size = new System.Drawing.Size(138, 245);
             this.dgElegiveis.TabIndex = 0;
             // 
             // c_Nome
@@ -373,52 +415,61 @@
             this.c_Numero.Name = "c_Numero";
             this.c_Numero.ReadOnly = true;
             this.c_Numero.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.c_Numero.Width = 40;
+            this.c_Numero.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.c_Numero.Width = 55;
+            // 
+            // cVotos
+            // 
+            this.cVotos.HeaderText = "qntVotos";
+            this.cVotos.Name = "cVotos";
+            this.cVotos.ReadOnly = true;
+            this.cVotos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cVotos.Visible = false;
             // 
             // tabResultado
             // 
-            this.tabResultado.Controls.Add(this.chart1);
+            this.tabResultado.Controls.Add(this.graphPie);
             this.tabResultado.Location = new System.Drawing.Point(4, 22);
             this.tabResultado.Name = "tabResultado";
             this.tabResultado.Padding = new System.Windows.Forms.Padding(3);
-            this.tabResultado.Size = new System.Drawing.Size(394, 427);
+            this.tabResultado.Size = new System.Drawing.Size(915, 611);
             this.tabResultado.TabIndex = 2;
             this.tabResultado.Text = "RESULTADO";
             this.tabResultado.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // graphPie
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(42, 68);
-            this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // lbNumMinimo
-            // 
-            this.lbNumMinimo.AutoSize = true;
-            this.lbNumMinimo.Location = new System.Drawing.Point(109, 395);
-            this.lbNumMinimo.Name = "lbNumMinimo";
-            this.lbNumMinimo.Size = new System.Drawing.Size(285, 13);
-            this.lbNumMinimo.TabIndex = 16;
-            this.lbNumMinimo.Text = "*Necessário no minimo 2 candidados para iniciar votações ";
+            chartArea1.AxisX.Title = "Candidatos";
+            chartArea1.AxisY.Title = "Votos";
+            chartArea1.Name = "ChartArea1";
+            this.graphPie.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graphPie.Legends.Add(legend1);
+            this.graphPie.Location = new System.Drawing.Point(8, 6);
+            this.graphPie.Name = "graphPie";
+            this.graphPie.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.LabelFormat = "#";
+            series1.Legend = "Legend1";
+            series1.Name = "Candidatos";
+            this.graphPie.Series.Add(series1);
+            this.graphPie.Size = new System.Drawing.Size(900, 600);
+            this.graphPie.TabIndex = 0;
+            this.graphPie.Text = "Resultado";
             // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 453);
+            this.ClientSize = new System.Drawing.Size(923, 637);
             this.Controls.Add(this.tabs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "TelaInicial";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sistema de votação";
             this.tabs.ResumeLayout(false);
             this.tabCadastro.ResumeLayout(false);
             this.tabCadastro.PerformLayout();
@@ -428,7 +479,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbVotacaoImagem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgElegiveis)).EndInit();
             this.tabResultado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphPie)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,12 +509,15 @@
         private System.Windows.Forms.TextBox txtEntradaNum;
         private System.Windows.Forms.Button btnVotar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_Numero;
         private System.Windows.Forms.Button btnIniciarVotacao;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.CheckBox cbConfirma;
         private System.Windows.Forms.Label lbNumMinimo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cVotos;
+        private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Label lbMaxCandidatos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graphPie;
     }
 }
 
