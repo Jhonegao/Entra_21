@@ -1,0 +1,14 @@
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.csprojAssemblyReference.cache
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.Form1.resources
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.Properties.Resources.resources
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.csproj.GenerateResource.cache
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.csproj.CoreCompileInputs.cache
+C:\GitEntra21\CadastroPessoaForm\bin\Debug\CadastroPessoaForm.exe.config
+C:\GitEntra21\CadastroPessoaForm\bin\Debug\CadastroPessoaForm.exe
+C:\GitEntra21\CadastroPessoaForm\bin\Debug\CadastroPessoaForm.pdb
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.exe
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.pdb
+C:\GitEntra21\CadastroPessoaForm\bin\Debug\Correios.Net.dll
+C:\GitEntra21\CadastroPessoaForm\bin\Debug\Correios.Net.pdb
+C:\GitEntra21\CadastroPessoaForm\obj\Debug\CadastroPessoaForm.csproj.CopyComplete
+C:\GitEntra21\CadastroPessoaForm\bin\Debug\Correios.CEP.dll

@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoteSystem", "VoteSystem\Vo
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SystemVote", "SystemVote\SystemVote.vdproj", "{9A80AD10-2AB8-4AE6-8E8F-6445B03936CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SobreMetodos", "SobreMetodos\SobreMetodos.csproj", "{6C81FB36-C843-464F-A328-F4668004F407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroPessoaForm", "CadastroPessoaForm\CadastroPessoaForm.csproj", "{743458AE-C392-4023-A7C6-2831CDD3862F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{B41D333A-AB54-48E4-9AEF-ADBA2C3F0F5A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A80AD10-2AB8-4AE6-8E8F-6445B03936CD}.Debug|Any CPU.ActiveCfg = Debug
 		{9A80AD10-2AB8-4AE6-8E8F-6445B03936CD}.Release|Any CPU.ActiveCfg = Release
+		{6C81FB36-C843-464F-A328-F4668004F407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C81FB36-C843-464F-A328-F4668004F407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C81FB36-C843-464F-A328-F4668004F407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C81FB36-C843-464F-A328-F4668004F407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743458AE-C392-4023-A7C6-2831CDD3862F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743458AE-C392-4023-A7C6-2831CDD3862F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743458AE-C392-4023-A7C6-2831CDD3862F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743458AE-C392-4023-A7C6-2831CDD3862F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+C:\GitEntra21\SobreMetodos\bin\Debug\SobreMetodos.exe.config
+C:\GitEntra21\SobreMetodos\bin\Debug\SobreMetodos.exe
+C:\GitEntra21\SobreMetodos\bin\Debug\SobreMetodos.pdb
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.csprojAssemblyReference.cache
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.Metodos.resources
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.Properties.Resources.resources
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.csproj.GenerateResource.cache
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.csproj.CoreCompileInputs.cache
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.exe
+C:\GitEntra21\SobreMetodos\obj\Debug\SobreMetodos.pdb
