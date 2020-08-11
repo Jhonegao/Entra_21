@@ -46,7 +46,7 @@
             this.txtEntradaDDD = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbGenero = new System.Windows.Forms.ComboBox();
             this.txtEntradaCidade = new System.Windows.Forms.TextBox();
             this.txtEntradaBairro = new System.Windows.Forms.TextBox();
             this.txtEntradaEstado = new System.Windows.Forms.TextBox();
@@ -207,17 +207,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // cbGenero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "Outro"});
-            this.comboBox1.Location = new System.Drawing.Point(545, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 19;
+            this.cbGenero.FormattingEnabled = true;
+            this.cbGenero.Location = new System.Drawing.Point(545, 31);
+            this.cbGenero.Name = "cbGenero";
+            this.cbGenero.Size = new System.Drawing.Size(121, 21);
+            this.cbGenero.TabIndex = 19;
             // 
             // txtEntradaCidade
             // 
@@ -319,7 +315,7 @@
             this.Controls.Add(this.txtEntradaBairro);
             this.Controls.Add(this.txtEntradaEstado);
             this.Controls.Add(this.txtEntradaCidade);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbGenero);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtEntradaDDD);
@@ -365,7 +361,7 @@
         private System.Windows.Forms.TextBox txtEntradaDDD;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbGenero;
         private System.Windows.Forms.TextBox txtEntradaCidade;
         private System.Windows.Forms.TextBox txtEntradaBairro;
         private System.Windows.Forms.TextBox txtEntradaEstado;

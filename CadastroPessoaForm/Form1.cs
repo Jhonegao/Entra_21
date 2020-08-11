@@ -19,6 +19,7 @@ namespace CadastroPessoaForm
         {
             InitializeComponent();
         }
+        string[] generosValidos = {"Masculino", "Feminino", "Outros" };
         #region ValidadorNome
         private string IsValidName(string nome)
         {
@@ -139,6 +140,15 @@ namespace CadastroPessoaForm
 
         }
         #endregion
+
+        public bool IsValidGenEntrance(int indexCB)
+        {
+            if (indexCB == 0)
+            {
+
+            }
+            return true;
+        }
 
         #region ValidarCadastroGERAL
         private string ValidarCadastro(string p_nome, string p_cpf, int p_idade)
