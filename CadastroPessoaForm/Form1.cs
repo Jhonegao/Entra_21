@@ -10,16 +10,25 @@ using Correios.CEP;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace CadastroPessoaForm
 {
     public partial class Form1 : Form
     {
+        #region DadosComboBox
+        string[] generosValidos = {"Masculino", "Feminino", "Outros" };
+        string[] tiposSanguineoValidos = { "A+", "A-", "AB", "O-", "B+", "B-" };
+        string[] escolaridadeValida = { "Superior Completo", "Superiror Incompleto", "Pós", "Mestrado", "Doutorado", "Pós-doutorado", "Ensino Médio Completo", "Ensino Médio Incompleto", "Fundamental Completo"};
+        #endregion
         public Form1()
         {
             InitializeComponent();
+            cbGenero.Items.AddRange(generosValidos);
+            cbTipoSanguineo.Items.AddRange(tiposSanguineoValidos);
+            cbEscolaridade.Items.AddRange(escolaridadeValida);
         }
-        string[] generosValidos = {"Masculino", "Feminino", "Outros" };
+
         #region ValidadorNome
         private string IsValidName(string nome)
         {
@@ -77,7 +86,7 @@ namespace CadastroPessoaForm
         }
         #endregion
         #region ValidadorEmail
-        public bool IsValid(string emailaddress)
+        public bool IsValidEmail(string emailaddress)
         {
             try
             {
@@ -140,16 +149,24 @@ namespace CadastroPessoaForm
 
         }
         #endregion
-
-        public bool IsValidGenEntrance(int indexCB)
+        #region ValidarEntradaDoGenero
+        public bool IsValidGenenero(int cb, string texto)
         {
-            if (indexCB == 0)
-            {
-
-            }
-            return true;
+            return generosValidos[cb].Equals(texto);
         }
-
+        #endregion
+        #region ValidarEntradaTipoSangue
+        public bool IsValidTipoSangue(int cb, string texto)
+        {
+           return tiposSanguineoValidos[cb].Equals(texto);
+        }
+        #endregion
+        #region ValidarEntradaEscolaridade
+        public bool IsValidEscolaridade(int cb, string texto)
+        {
+            return tiposSanguineoValidos[cb].Equals(texto);
+        }
+        #endregion
         #region ValidarCadastroGERAL
         private string ValidarCadastro(string p_nome, string p_cpf, int p_idade)
         {
@@ -168,8 +185,7 @@ namespace CadastroPessoaForm
         private void button1_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(IsValidPhone(txtEntradaDDD.Text).ToString());
-
-
+            //MessageBox.Show(IsValidGenenero(cbGenero.SelectedIndex, cbGenero.SelectedItem.ToString()).ToString());
         }
 
         private void txtEntradaCEP_Leave(object sender, EventArgs e)

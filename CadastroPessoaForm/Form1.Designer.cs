@@ -32,8 +32,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.txtEntradaCEP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +55,8 @@
             this.txtEntradaRua = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNumeroEnderecoEntrada = new System.Windows.Forms.TextBox();
+            this.cbTipoSanguineo = new System.Windows.Forms.ComboBox();
+            this.cbEscolaridade = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -86,20 +86,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 2;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(547, 99);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 7;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(146, 99);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 6;
             // 
             // txtEntradaCEP
             // 
@@ -175,7 +161,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(544, 83);
+            this.label8.Location = new System.Drawing.Point(519, 83);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 13);
             this.label8.TabIndex = 15;
@@ -209,6 +195,7 @@
             // 
             // cbGenero
             // 
+            this.cbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenero.FormattingEnabled = true;
             this.cbGenero.Location = new System.Drawing.Point(545, 31);
             this.cbGenero.Name = "cbGenero";
@@ -300,11 +287,31 @@
             this.txtNumeroEnderecoEntrada.Size = new System.Drawing.Size(49, 20);
             this.txtNumeroEnderecoEntrada.TabIndex = 29;
             // 
+            // cbTipoSanguineo
+            // 
+            this.cbTipoSanguineo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoSanguineo.FormattingEnabled = true;
+            this.cbTipoSanguineo.Location = new System.Drawing.Point(146, 99);
+            this.cbTipoSanguineo.Name = "cbTipoSanguineo";
+            this.cbTipoSanguineo.Size = new System.Drawing.Size(121, 21);
+            this.cbTipoSanguineo.TabIndex = 30;
+            // 
+            // cbEscolaridade
+            // 
+            this.cbEscolaridade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEscolaridade.FormattingEnabled = true;
+            this.cbEscolaridade.Location = new System.Drawing.Point(522, 99);
+            this.cbEscolaridade.Name = "cbEscolaridade";
+            this.cbEscolaridade.Size = new System.Drawing.Size(121, 21);
+            this.cbEscolaridade.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbEscolaridade);
+            this.Controls.Add(this.cbTipoSanguineo);
             this.Controls.Add(this.txtNumeroEnderecoEntrada);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -327,8 +334,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.txtEntradaCEP);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox4);
@@ -347,8 +352,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtEntradaCEP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -372,6 +375,8 @@
         private System.Windows.Forms.TextBox txtEntradaRua;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNumeroEnderecoEntrada;
+        private System.Windows.Forms.ComboBox cbTipoSanguineo;
+        private System.Windows.Forms.ComboBox cbEscolaridade;
     }
 }
 
